@@ -12,6 +12,7 @@ const specialDefense = document.getElementById('special-defense');
 const speed = document.getElementById('speed');
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
+const topContainer = document.getElementsByClassName('top-container')[0];
 
 const getPokemon = async () => {
   try {
@@ -29,6 +30,7 @@ const getPokemon = async () => {
     spriteContainer.innerHTML = `
       <img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">
     `;
+    topContainer.style.backgroundColor = '#f0f1f7';
 
     // Set stats
     hp.textContent = data.stats[0].base_stat;
@@ -65,6 +67,7 @@ const resetDisplay = () => {
   specialAttack.textContent = '';
   specialDefense.textContent = '';
   speed.textContent = '';
+  topContainer.style.backgroundColor = '#232323';
 };
 
 searchForm.addEventListener('submit', e => {

@@ -30,7 +30,7 @@ const getPokemon = async () => {
     spriteContainer.innerHTML = `
       <img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">
     `;
-    topContainer.style.backgroundColor = '#f0f1f7';
+    topContainer.style.backgroundColor = "#f0f1f7";
 
     // Set stats
     hp.textContent = data.stats[0].base_stat;
